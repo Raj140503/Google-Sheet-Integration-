@@ -2,7 +2,7 @@ from google.auth import exceptions
 from google.oauth2 import service_account
 import gspread
 
-json_keyfile_path = 'C:\\Users\\rajpa\\OneDrive\\Desktop\\generateGoogleSheet\\gsheet-416106-1e88be0a738f.json'
+json_keyfile_path = 'C:\\Users\\rajpa\\OneDrive\\Desktop\\generateGoogleSheet\\gsheet-416106-1e88be0a738f.json' // add your json file
 
 try:
     credentials = service_account.Credentials.from_service_account_file(
@@ -14,7 +14,7 @@ except exceptions.GoogleAuthError as e:
     raise
 
 gc = gspread.authorize(credentials)
-spreadsheet_key = '1h1nIgLCQYuTNmuhbuvJHFmXm8w8enm7_ILFFFzAbfko' 
+spreadsheet_key = '1h1nIgLCQYuTNmuhbuvJHFmXm8w8enm7_ILFFFzAbfko' // add your spreadsheet key
 try:
     spreadsheet = gc.open_by_key(spreadsheet_key)
 except gspread.exceptions.SpreadsheetNotFound as e:
